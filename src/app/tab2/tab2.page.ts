@@ -49,6 +49,7 @@ export class Tab2Page {
                 .child(imgFilePath)
                 .getDownloadURL()
                 .then((url) => {
+                  this.fotoService.namaFoto.unshift(data.filePath);
                   this.fotoService.pushUrlImage(url);
                 });
             });

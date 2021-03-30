@@ -17,6 +17,7 @@ const { Camera, Filesystem, Storage } = Plugins;
 export class FotoService {
   public dataFoto: Photo[] = [];
   public urlImageStorage: string[] = [];
+  public namaFoto: string[] = [];
   private keyFoto: string = 'foto';
   private platform: Platform;
 
