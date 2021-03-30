@@ -1,0 +1,7 @@
+{
+  "name": "test1_ionic_tabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
