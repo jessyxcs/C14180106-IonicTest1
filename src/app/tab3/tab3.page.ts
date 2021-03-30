@@ -18,7 +18,7 @@ export class Tab3Page {
   photoName = this.fotoService.namaFoto;
 
   async ionViewDidEnter() {
-    await this.fotoService.loadFoto();
+    //await this.fotoService.loadFoto();
     this.tampilkanData();
   }
 

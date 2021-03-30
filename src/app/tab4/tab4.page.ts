@@ -7,16 +7,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./tab4.page.scss'],
 })
 export class Tab4Page implements OnInit {
-  constructor(private route: ActivatedRoute) {}
-
   iFoto: string;
-
-  ngOnInit() {
-    // let iFoto = this.route.snapshot.paramMap.get('photo');
-  }
-
-  async ionViewDidEnter() {
+  constructor(private route: ActivatedRoute) {
     let iFoto = this.route.snapshot.paramMap.get('photo');
     this.iFoto = iFoto;
   }
+
+  ngOnInit() {}
 }
