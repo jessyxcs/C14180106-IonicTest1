@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-tab4',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab4.page.scss'],
 })
 export class Tab4Page implements OnInit {
+  constructor(private route: ActivatedRoute) {}
 
-  constructor() { }
+  iFoto: string;
 
   ngOnInit() {
+    // let iFoto = this.route.snapshot.paramMap.get('photo');
   }
 
+  async ionViewDidEnter() {
+    let iFoto = this.route.snapshot.paramMap.get('photo');
+    this.iFoto = iFoto;
+  }
 }

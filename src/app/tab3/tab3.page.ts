@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { Router } from '@angular/router';
 import { FotoService } from '../services/foto.service';
 
 @Component({
@@ -10,7 +11,8 @@ import { FotoService } from '../services/foto.service';
 export class Tab3Page {
   constructor(
     private afStorage: AngularFireStorage,
-    public fotoService: FotoService
+    public fotoService: FotoService,
+    private router: Router
   ) {}
 
   photoName = this.fotoService.namaFoto;
@@ -35,5 +37,9 @@ export class Tab3Page {
       .catch((error) => {
         console.log(error);
       });
+  }
+
+  toTab4(iFoto: string) {
+    this.router.navigate(['/tab4', iFoto]);
   }
 }

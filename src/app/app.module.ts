@@ -10,6 +10,11 @@ import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { RouterModule, Routes } from '@angular/router';
+import { Tab4Page } from './tab4/tab4.page';
+
+const ROUTES: Routes = [{ path: 'tab4/:photo', component: Tab4Page }];
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -19,6 +24,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
+    RouterModule.forRoot(ROUTES),
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

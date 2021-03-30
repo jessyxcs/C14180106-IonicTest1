@@ -11,7 +11,7 @@
         size="3"
         *ngFor="let iFoto of fotoService.urlImageStorage; index as position"
       >
-        <ion-img [src]="iFoto"></ion-img>
+        <ion-img [src]="iFoto" (click)="toTab4(iFoto)"></ion-img>
         <h5>{{photoName[index]}}</h5>
       </ion-col>
     </ion-row>
